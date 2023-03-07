@@ -1,0 +1,89 @@
+
+
+body{
+    background-image: url(../photos/moroccan-flowerBackground.png) ;
+    background-color:rgba(145, 184, 151, 0.753);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p{
+    font-style: italic;
+}
+
+
+.nonBodyColor{
+  color: white;
+}
+
+.bodysection{
+    width:100%;
+    margin:auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+.bodysectionContacto{
+    width:100%;
+    margin:auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.seccionHeader{
+    background: green;
+    width:100%;
+    margin:auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin-left: 25px;
+    float: left;
+    text-align: center;
+}
+
+nav ul li a{
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+}
+nav ul li a:hover{
+    color: black;
+    background-color: greenyellow;
+}
+
+.imagenDeInicio{
+    text-align: center;
+}
+
+.navegacion{
+    width: 100%;
+    margin: auto;
+}
+.seccionesFooter{
+    width: 100%;
+    background-color: green;
+    margin:auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.producto{
+   max-width: 250px;
+   max-height: 250px;
+    margin:2rem;
+}
+
+.productSection{
+    max-width: max-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+.formulario{
+    padding: 25px;
+}
