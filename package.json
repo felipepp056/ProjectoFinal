@@ -1,0 +1,26 @@
+{
+  "name": "projectofinal",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --include-path scss scss/estilo.scss css/estilo.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/felipepp056/ProjectoFinal.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/felipepp056/ProjectoFinal/issues"
+  },
+  "homepage": "https://github.com/felipepp056/ProjectoFinal#readme",
+  "devDependencies": {
+    "node-sass": "^8.0.0",
+    "nodemon": "^2.0.21"
+  },
+  "dependencies": {},
+  "description": ""
+}

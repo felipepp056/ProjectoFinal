@@ -1,0 +1,195 @@
+/*variables*/
+
+$PrimBackColor: green;
+$SecBackColor: rgb(160, 207, 160);
+$SelectedColor: rgba(145, 184, 151, 0.753);
+
+// Estilos necesarios para animaciones y demás funciones
+.general{
+    width:100%;
+    margin:auto;
+    display: grid;
+}
+.generalView{
+    background: $PrimBackColor;
+    body.dark & {
+        background: grey;
+    }
+}
+.bodysection{
+    @extend .general;
+    grid-template-columns: repeat(3,1fr);
+}
+.bodysectionContacto{
+    @extend .general;
+    grid-template-columns: repeat(2,1fr);
+}
+.seccionHeader{
+    background: $PrimBackColor;
+    @extend .general;
+    grid-template-columns: repeat(3,1fr);
+
+    body.dark & {
+        background: black;
+    }
+}
+
+.seccionesFooter{
+    @extend .general;
+    background-color:$PrimBackColor;
+    grid-template-columns: repeat(3,1fr);
+
+    &.dark{
+        background: black;
+    }
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin-left: 25px;
+    text-align: center;
+   
+           a{
+            padding: 15px;
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+                &:hover{
+                   color: black;
+                   background-color: $SecBackColor;
+                   body.dark & {
+                    background-color: rgb(180, 169, 169);
+                }
+               }
+          }
+}
+
+body{
+    background-image: url(../photos/moroccan-flowerBackground.png) ;
+    font-family: Arial, Helvetica, sans-serif;
+
+    &.dark{
+        background: black;
+    }
+}
+
+// Dark section
+
+
+.darkFontColor{
+    body.dark & {
+        color: white;
+     }
+}
+p{
+    font-style: italic;
+    @extend .darkFontColor;
+}
+
+h1{
+    @extend .darkFontColor;
+}
+
+h2{
+    @extend .darkFontColor;
+}
+
+.darkCards{
+    body.dark & {
+        color: black;
+     }
+}
+
+
+.darkLabels{
+    body.dark & {
+        color: white;
+     }
+}
+
+// Fin de dark section
+
+// Estilos necesarios para animaciones y demás funciones
+
+.card2:hover{
+    transform: translate(20px, 10px);
+}
+.nonBodyColor{
+  color: white;
+}
+
+
+.imagenDeInicio{
+    text-align: center;
+}
+
+.navegacion{
+    width: 100%;
+    margin: auto;
+}
+
+.producto{
+   max-width: 250px;
+   max-height: 250px;
+    margin:2rem;
+    
+    &:hover{
+        transform: scale(1.2, 1.2);
+
+    }
+}
+
+.productSection{
+    max-width: max-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.formulario{
+    padding: 25px;
+}
+
+// Switch para el cambio de modo nocturno
+.switch {
+    background: #343d5b;
+    border-radius: 1000px;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    outline: none;
+
+    &::after {
+        content: "";
+        display: block;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        background: #f1f1f1;
+        top: 0;
+        left: 0;
+        right: unset;
+        border-radius: 100px;
+        transition: .3 ease all;
+        box-shadow: 0px 0px 2px 2px rgba(0,0,0,.2);
+    }
+     &.active {
+        background: orange;
+        color: black;
+        &::after{
+            left: unset;
+            right: 0;
+        }
+        
+     }   
+    span {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        display: block;
+        background: none;
+        color: #fff
+    }
+}

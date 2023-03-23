@@ -1,89 +1,126 @@
+/*variables*/
+.general, .bodysection, .bodysectionContacto, .seccionHeader, .seccionesFooter {
+  width: 100%;
+  margin: auto;
+  display: grid; }
 
+.generalView {
+  background: green; }
+  body.dark .generalView {
+    background: grey; }
 
-body{
-    background-image: url(../photos/moroccan-flowerBackground.png) ;
-    background-color:rgba(145, 184, 151, 0.753);
-    font-family: Arial, Helvetica, sans-serif;
-}
+.bodysection {
+  grid-template-columns: repeat(3, 1fr); }
 
-p{
-    font-style: italic;
-}
+.bodysectionContacto {
+  grid-template-columns: repeat(2, 1fr); }
 
+.seccionHeader {
+  background: green;
+  grid-template-columns: repeat(3, 1fr); }
+  body.dark .seccionHeader {
+    background: black; }
 
-.nonBodyColor{
-  color: white;
-}
+.seccionesFooter {
+  background-color: green;
+  grid-template-columns: repeat(3, 1fr); }
+  .seccionesFooter.dark {
+    background: black; }
 
-.bodysection{
-    width:100%;
-    margin:auto;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-}
-.bodysectionContacto{
-    width:100%;
-    margin:auto;
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-}
-.seccionHeader{
-    background: green;
-    width:100%;
-    margin:auto;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-}
-
-nav ul li{
-    display: inline-block;
-    list-style: none;
-    margin-left: 25px;
-    float: left;
-    text-align: center;
-}
-
-nav ul li a{
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin-left: 25px;
+  text-align: center; }
+  nav ul li a {
     padding: 15px;
     color: white;
     text-decoration: none;
-    display: inline-block;
-}
-nav ul li a:hover{
-    color: black;
-    background-color: greenyellow;
-}
+    display: inline-block; }
+    nav ul li a:hover {
+      color: black;
+      background-color: #a0cfa0; }
+      body.dark nav ul li a:hover {
+        background-color: #b4a9a9; }
 
-.imagenDeInicio{
-    text-align: center;
-}
+body {
+  background-image: url(../photos/moroccan-flowerBackground.png);
+  font-family: Arial, Helvetica, sans-serif; }
+  body.dark {
+    background: black; }
 
-.navegacion{
-    width: 100%;
-    margin: auto;
-}
-.seccionesFooter{
-    width: 100%;
-    background-color: green;
-    margin:auto;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-}
+body.dark .darkFontColor, body.dark p, body.dark h1, body.dark h2 {
+  color: white; }
 
-.producto{
-   max-width: 250px;
-   max-height: 250px;
-    margin:2rem;
-}
+p {
+  font-style: italic; }
 
-.productSection{
-    max-width: max-content;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
+body.dark .darkCards {
+  color: black; }
 
+body.dark .darkLabels {
+  color: white; }
 
-.formulario{
-    padding: 25px;
-}
+.card2:hover {
+  transform: translate(20px, 10px); }
+
+.nonBodyColor {
+  color: white; }
+
+.imagenDeInicio {
+  text-align: center; }
+
+.navegacion {
+  width: 100%;
+  margin: auto; }
+
+.producto {
+  max-width: 250px;
+  max-height: 250px;
+  margin: 2rem; }
+  .producto:hover {
+    transform: scale(1.2, 1.2); }
+
+.productSection {
+  max-width: max-content;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; }
+
+.formulario {
+  padding: 25px; }
+
+.switch {
+  background: #343d5b;
+  border-radius: 1000px;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  outline: none; }
+  .switch::after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background: #f1f1f1;
+    top: 0;
+    left: 0;
+    right: unset;
+    border-radius: 100px;
+    transition: .3 ease all;
+    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2); }
+  .switch.active {
+    background: orange;
+    color: black; }
+    .switch.active::after {
+      left: unset;
+      right: 0; }
+  .switch span {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    background: none;
+    color: #fff; }
